@@ -1,16 +1,8 @@
 ## Healthcare Insurance Cost Analysis Project
 
 This project set out to explore how Data Analytics and AI tools can be use to extract inside information from raw datasets into meaningful insights that utilise for prediction and decesion manking in data driven organisation and for business success. The healthcare Insurance Cost Analysis Project seeks empirically to explore systematic approach to analyse a full end‑to‑end data analytics and machine learning investigation into healthcare insurance costs
-Using a real‑world dataset containing Age, Gender, Body mass index, Somking habit and Geographic location that affect insurance cost. The project applies:
+Using a real‑world dataset containing Age, Gender, Body mass index, Somking habit and Geographic location that affect insurance cost. The goal is to understand the drivers of insurance charges and build predictive models capable of estimating cost based on customer attributes. 
 
-- Statistical foundations  
-- Exploratory data analysis  
-- Probability and inferential methods  
-- Feature engineering  
-- Supervised and unsupervised machine learning  
-- Dashboarding and storytelling techniques  
-
-The goal is to understand the drivers of insurance charges and build predictive models capable of estimating cost based on customer attributes. 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 ## Dataset Content
