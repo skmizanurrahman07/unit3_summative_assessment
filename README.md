@@ -85,11 +85,84 @@ Structure Justification:
 
    - AI supported: GitHub copilot extention was installed and so did speed up some repetative tasks.
 
-## Ethical considerations
+# Ethical Considerations, Data Privacy and Governance
 
-- The data was already anonymised and contained no information that could be used to identify an individual so there were no ethical concerns.
-- However, GDPR and data privacy was consider during this project.
+## Ethical Considerations
 
+This project analyses healthcare insurance data to identify factors influencing insurance charges and develop predictive models. Although the dataset was anonymised and publicly available, ethical considerations remain important throughout the data lifecycle.
+
+### Fairness and Bias
+
+Machine learning models can unintentionally reinforce existing biases. The dataset may not fully represent all demographic groups and excludes factors such as medical history, income and occupation. Findings have therefore been interpreted cautiously and should not be used as the sole basis for real-world insurance decisions.
+
+### Transparency and Explainability
+
+All data cleaning, statistical testing, visualisations and machine learning approaches are documented within the project. Feature importance analysis and model evaluation metrics were used to improve transparency and understanding of model behaviour.
+
+### Responsible Use
+
+The predictive models developed in this project are intended for educational and analytical purposes only. Human oversight should always be maintained when applying data-driven recommendations in healthcare or insurance settings.
+
+---
+
+## Data Privacy
+
+The dataset was sourced from Kaggle and contains no personally identifiable information (PII). No names, addresses, contact details, NHS numbers or medical record identifiers were included.
+
+Only the variables necessary for the analysis were used:
+
+- Age
+- BMI
+- Smoking Status
+- Number of Children
+- Region
+- Insurance Charges
+
+This aligns with the UK GDPR principle of **Data Minimisation** (Article 5(1)(c)).
+
+---
+
+## UK GDPR and Legal Compliance
+
+Although the dataset was anonymised, this project was conducted with reference to the principles of the **UK General Data Protection Regulation (UK GDPR)** and the **Data Protection Act 2018**.
+
+The following UK GDPR principles were considered:
+
+| UK GDPR Principle | Application in this Project |
+|------------------|----------------------------|
+| Lawfulness, Fairness and Transparency | Data source, methodology and findings are clearly documented. |
+| Purpose Limitation | Data used solely for educational, analytical and research purposes. |
+| Data Minimisation | Only variables relevant to the project objectives were analysed. |
+| Accuracy | Data quality checks and cleaning procedures were performed before analysis. |
+| Integrity and Confidentiality | The dataset contains no identifiable personal information and is securely stored within the project repository. |
+| Accountability | All analytical decisions, assumptions and methodologies are documented within the notebooks and README. |
+
+References:
+
+- UK GDPR: https://www.legislation.gov.uk/eur/2016/679/contents
+- Data Protection Act 2018: https://www.legislation.gov.uk/ukpga/2018/12/contents
+
+---
+
+## Consent and Data Usage
+
+The dataset was obtained from a publicly available Kaggle repository and used in accordance with its published access conditions.
+
+Although individual consent records are not available, the dataset has been anonymised and made publicly accessible for data analysis and educational purposes. Proper attribution has been provided to the dataset owner.
+
+---
+
+## Social Impact
+
+Healthcare insurance analytics can influence pricing strategies, risk assessments and access to services. While data analytics can support better decision-making, predictive models may unintentionally reinforce inequalities if used without appropriate governance and human review.
+
+For this reason, the findings from this project should be viewed as decision-support insights rather than automated decision-making tools.
+
+---
+
+## Use of Generative AI
+
+GitHub Copilot and ChatGPT were used to support coding, documentation and troubleshooting during development. All generated outputs were independently reviewed, tested and validated before inclusion in the project. Responsibility for the final code, analysis and conclusions remains with the project author.
 ## Limitations & Alternatives:
 
 - Limited data points availble in the csv, other factors could influence the decsion such as medial history, family income etc.
