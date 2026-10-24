@@ -742,14 +742,14 @@ elif page == "Executive Summary":
     - Region has a modest effect.
     - Sex has limited impact.
     """)
-    st.success("""
+    st.markdown("""
     ## Best Model
 
     Random Forest Regression
 
-    R² = 0.8862
-    MAE = 2510.28
-    RMSE = 4572.72
+    **R² Score**: = 0.8862
+    **MAE**: = 2510.28
+    **RMSE**: = 4572.72
 
     The Random Forest model achieved the highest predictive accuracy and provided feature importance
     rankings that aligned closely with statistical analysis and business findings.
