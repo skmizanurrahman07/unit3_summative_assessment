@@ -342,6 +342,7 @@ elif page == "Ethics":
 
     st.markdown("""
     ## UK GDPR
+    The UK General Data Protection Regulation (UK GDPR) is a regulation in UK law on data protection and privacy in the European Union and the European Economic Area. It also applies to organisations outside the EU that process personal data of individuals in the EU.
 
     Principles considered:
 
@@ -354,7 +355,7 @@ elif page == "Ethics":
 
     ## Data Privacy
 
-    The dataset contains no personally identifiable information.
+    The dataset contains no personally identifiable information and follows UK GDPR principles of data minimisation and purpose limitation.
 
     ## Bias
 
