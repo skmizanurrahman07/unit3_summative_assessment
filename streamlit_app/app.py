@@ -55,6 +55,15 @@ if page == "Home":
     - Region
     - Number of Children
     """)
+    # add footer at the bottom of the page
+    st.divider()
+
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
+
+# Create EDA page
+
 if page == "EDA":
 
     st.title("Exploratory Data Analysis")
@@ -63,8 +72,8 @@ if page == "EDA":
     In this section, we explore the dataset to understand
     the factors influencing healthcare insurance charges.
     """)
-
-    # Filters
+   
+   # Filters
     st.sidebar.header("Filters")
 
     selected_region = st.sidebar.multiselect(
@@ -205,6 +214,13 @@ if page == "EDA":
             pie_fig,
             use_container_width=True
         )
+    # add footer at the bottom of the page    
+    st.divider()
+
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
+    
 # Create Hypothesis page
 elif page == "Hypothesis Testing":
 
@@ -236,7 +252,12 @@ elif page == "Hypothesis Testing":
     ANOVA p-value:
     0.0328
     """)
+     # add footer at the bottom of the page    
+    st.divider()
 
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
 # Create Machine Learning page:
 elif page == "Machine Learning":
 
@@ -306,6 +327,13 @@ elif page == "Machine Learning":
         feature_fig,
         use_container_width=True
     )
+    # add footer at the bottom of the page
+    st.divider()
+
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
+
 # Create Ethics page:
 
 elif page == "Ethics":
@@ -338,6 +366,13 @@ elif page == "Ethics":
     Machine learning outputs should support
     decision-making and not replace human judgement.
     """)
+    # add footer at the bottom of the page
+    st.divider()
+
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
+
 # Create Business Recommendations page:
 
 elif page == "Business Recommendations":
@@ -367,7 +402,12 @@ elif page == "Business Recommendations":
 
     Future analysis should include additional variables such as medical history, income and chronic conditions to improve model accuracy.
     """)
+    # add footer at the bottom of the page
+    st.divider()
 
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
 
 
 # Create Project Conclusions page:
@@ -395,3 +435,9 @@ elif page == "Project Conclusions":
 
     The dashboard successfully fulfils the business requirements by identifying key cost drivers and providing interactive visualisations to support data-driven decision making.
     """)
+    # add footer at the bottom of the page
+    st.divider()
+
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
