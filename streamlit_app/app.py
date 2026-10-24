@@ -25,6 +25,7 @@ page = st.sidebar.radio(
         "Hypothesis Testing",
         "Machine Learning",
         "Ethics",
+        "Business Requirement Validation",
         "Business Recommendations",
         "Project Conclusions"
     ]
@@ -367,6 +368,237 @@ elif page == "Ethics":
     Machine learning outputs should support
     decision-making and not replace human judgement.
     """)
+    # add footer at the bottom of the page
+    st.divider()
+
+    st.caption(
+        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+    )
+
+# Create Business Requirement Validation page:
+elif page == "Business Requirement Validation":
+
+    st.title("Business Requirement Validation")
+
+    st.write("""
+    This section evaluates whether the project's
+    original business requirements were successfully achieved.
+    """)
+# business requirement 1 validation section
+    st.header("Business Requirement 1")
+    st.subheader(
+        "Identify the factors affecting healthcare insurance costs."
+    )
+
+# Add a Visual Validation Chart
+    validation_df = pd.DataFrame({
+        "Factor": [
+            "Smoking Status",
+            "BMI",
+            "Age",
+            "Region",
+            "Sex"
+        ],
+        "Score": [
+            5,
+            4,
+            4,
+            2,
+            1
+        ]
+    })
+
+    fig = px.bar(
+        validation_df,
+        x="Factor",
+        y="Score",
+        color="Factor",
+        title="Relative Impact on Insurance Charges"
+    )
+
+    st.plotly_chart(
+        fig,
+        use_container_width=True
+    )
+    #---------------------------------------------------
+# business requirement 1 validation summary
+    st.info("""
+    Business Requirement 1 Summary
+
+    Smoking Status, BMI and Age were consistently identified
+    as the strongest cost drivers through statistical testing,
+    dashboard analysis and machine learning models.
+    """)
+
+    st.success("Requirement Achieved ✅")
+
+    st.markdown("""
+    ### Evidence
+
+    The project successfully identified the main
+    drivers of insurance costs using:
+
+    - Exploratory Data Analysis
+    - Statistical Testing
+    - Correlation Analysis
+    - Machine Learning
+
+    ### Key Findings
+
+    - Smoking Status is the strongest predictor.
+    - BMI significantly affects healthcare costs.
+    - Age significantly affects healthcare costs.
+    - Region has a smaller but significant effect.
+    - Sex has minimal influence.
+    """)
+
+    validation_df = pd.DataFrame({
+        "Factor": [
+            "Smoking Status",
+            "BMI",
+            "Age",
+            "Region",
+            "Sex"
+        ],
+        "Impact": [
+            "Very High",
+            "High",
+            "High",
+            "Moderate",
+            "Low"
+        ]
+    })
+    st.dataframe(validation_df)
+    st.info("""
+        Validation Summary
+
+        The combination of exploratory data analysis,
+        hypothesis testing and machine learning consistently
+        identified Smoking Status, BMI and Age as the primary
+        drivers of healthcare insurance costs.
+
+        Business Requirement 1 was successfully achieved.
+        """)
+
+  # business requirement 2 validation section  
+    st.header("Business Requirement 2")
+
+    st.subheader(
+        "Develop an interactive business intelligence dashboard."
+    )
+    #  Dashboard Deliverables Section
+    st.subheader("Dashboard Deliverables")
+   
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.metric("Power BI Dashboard", "Completed")
+
+    with col2:
+        st.metric("Streamlit Dashboard", "Completed")
+
+    with col3:
+        st.metric("Business Requirements", "2/2")
+
+    st.success("Requirement Achieved ✅")
+  
+  #Dashboard evidence section
+
+    st.subheader("Dashboard Evidence")
+    st.subheader("Dashboard Deliverables")
+
+    deliverables = pd.DataFrame({
+        "Component": [
+            "Power BI Dashboard",
+            "Streamlit Dashboard",
+            "Interactive Filters",
+            "Machine Learning Results",
+            "Business Recommendations"
+        ],
+        "Status": [
+            "Completed",
+            "Completed",
+            "Completed",
+            "Completed",
+            "Completed"
+        ]
+    })
+
+    st.dataframe(
+        deliverables,
+        use_container_width=True
+    )
+
+#---------------------------------------------------
+    st.markdown("""
+    ### Evidence
+    Interactive dashboards were successfully developed using:
+
+    - Power BI
+    - Streamlit
+
+    """)
+
+
+    st.image(
+        "docs/images/dashboard_screenshot.png",
+        caption="Power BI Healthcare Insurance Cost Analysis Dashboard"
+    )
+    st.markdown("""
+    ### Features Delivered
+
+    - Interactive filters
+    - KPI cards
+    - Distribution analysis
+    - Region comparison
+    - Smoking analysis
+    - Hypothesis validation
+    - Machine learning evaluation
+    - Ethical and governance reporting
+    """)
+
+    st.info("""
+    Final Outcome
+
+    Both business requirements were successfully
+    achieved through statistical analysis,
+    machine learning and interactive dashboard
+    development.
+    """)
+
+    #hypothesis outcomes
+    st.subheader("Hypothesis Validation Summary")
+    hypothesis_df = pd.DataFrame({
+        "Hypothesis":[
+            "H1 Smoking",
+            "H2 BMI",
+            "H3 Children",
+            "H4 Age",
+            "H5 Region",
+            "H6 Sex"
+        ],
+        "Result":[
+            "Supported",
+            "Supported",
+            "Partially Supported",
+            "Supported",
+            "Supported",
+            "Not Strongly Supported"
+        ]
+    })
+    st.dataframe(hypothesis_df)
+
+    st.success("""
+    Final Assessment
+
+    Both business requirements were fully achieved.
+
+    The project successfully identified the primary drivers
+    of healthcare insurance costs and delivered interactive
+    business intelligence dashboards that support evidence-based
+    decision making.
+    """)
+ 
     # add footer at the bottom of the page
     st.divider()
 
