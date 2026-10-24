@@ -744,17 +744,39 @@ elif page == "Executive Summary":
     """)
     st.success("""
     ## Best Model
+
     Random Forest Regression
+
     R² = 0.8862
     MAE = 2510.28
     RMSE = 4572.72
+
     The Random Forest model achieved the highest predictive accuracy and provided feature importance
     rankings that aligned closely with statistical analysis and business findings.
     """)
+
     st.info("""
     ## Business Outcome
        The project successfully identified the key drivers of healthcare insurance costs
        and delivered interactive business intelligence dashboards to support evidence-based decision making.
+    """)
+
+    st.success("""
+        Project Achievements
+
+        ✅ Business Requirement 1 Successfully Achieved
+
+        ✅ Business Requirement 2 Successfully Achieved
+
+        ✅ Statistical Hypotheses Validated
+
+        ✅ Interactive Power BI Dashboard Developed
+
+        ✅ Interactive Streamlit Dashboard Developed
+
+        ✅ Machine Learning Models Evaluated
+
+        ✅ Ethical, Privacy and Governance Considerations Addressed
     """)
 
     # add footer at the bottom of the page
