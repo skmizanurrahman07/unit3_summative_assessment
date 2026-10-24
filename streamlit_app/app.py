@@ -27,7 +27,8 @@ page = st.sidebar.radio(
         "Ethics",
         "Business Requirement Validation",
         "Business Recommendations",
-        "Project Conclusions"
+        "Project Conclusions",
+        "Executive Summary"
     ]
 )
 # Add Home Page
@@ -223,6 +224,7 @@ if page == "EDA":
     )
     
 # Create Hypothesis page
+
 elif page == "Hypothesis Testing":
 
     st.title("Hypothesis Testing")
@@ -253,17 +255,32 @@ elif page == "Hypothesis Testing":
     ANOVA p-value:
     0.0328
     """)
-     # add footer at the bottom of the page    
-    st.divider()
+    
+    st.info("""
+        Hypothesis Validation Summary
 
+        Five out of six hypotheses were supported or partially
+        supported by statistical analysis and machine learning.
+
+        Smoking status, BMI and age consistently emerged as the
+        strongest predictors of healthcare insurance costs.
+
+        These findings support the project's business objective
+        of identifying the primary drivers of insurance charges.
+    """)
+    # add footer at the bottom of the page    
+    st.divider()
+    
     st.caption(
-        "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
-    )
+            "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+        )
+
 # Create Machine Learning page:
+
 elif page == "Machine Learning":
 
     st.title("Machine Learning Results")
-
+    # model comparison chart
     results = pd.DataFrame({
         "Model": [
             "Linear Regression",
@@ -278,6 +295,20 @@ elif page == "Machine Learning":
             0.8745
         ]
     })
+    fig = px.bar(
+        results,
+        x="Model",
+        y="R²",
+        color="Model",
+        title="Machine Learning Model Comparison"
+    )
+
+    st.plotly_chart(
+        fig,
+        use_container_width=True
+    )
+
+   # Model Performance Chart
 
     st.subheader("Model Performance")
 
@@ -297,7 +328,18 @@ elif page == "Machine Learning":
 
     RMSE = 4572.72
     """)
-    feature_importance = pd.DataFrame({
+    st.info("""
+        Why Random Forest?
+
+        Random Forest achieved the highest R² score,
+        lowest prediction error and produced feature
+        importance rankings that aligned strongly with
+        both the statistical analysis and business findings.
+    """)
+
+    # Feature Importance Chart
+
+    importance_df = pd.DataFrame({
         "Feature": [
             "Smoking Status",
             "BMI",
@@ -313,21 +355,32 @@ elif page == "Machine Learning":
             1.6
         ]
     })
-
-    st.subheader("Random Forest Feature Importance")
-
-    feature_fig = px.bar(
-        feature_importance,
-        x="Feature",
-        y="Importance",
+    fig = px.bar(
+        importance_df,
+        x="Importance",
+        y="Feature",
+        orientation="h",
         color="Feature",
-        title="Feature Importance"
+        title="Random Forest Feature Importance"
     )
 
     st.plotly_chart(
-        feature_fig,
+        fig,
         use_container_width=True
     )
+
+    st.info("""
+        Feature Importance Interpretation
+
+        Smoking Status accounts for approximately 60% of
+        the model's predictive power, confirming it as the
+        single most influential factor affecting healthcare
+        insurance costs.
+
+        BMI and Age are also significant predictors, while
+        Region and Children contribute comparatively less.
+    """)
+
     # add footer at the bottom of the page
     st.divider()
 
@@ -674,3 +727,38 @@ elif page == "Project Conclusions":
     st.caption(
         "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
     )
+
+# Create Executive Summary page:
+
+elif page == "Executive Summary":
+
+    st.title("Executive Summary")
+
+    st.markdown("""
+    ## Key Findings
+    - Smoking Status is the strongest predictor.
+    - BMI significantly affects charges.
+    - Age significantly affects charges.
+    - Region has a modest effect.
+    - Sex has limited impact.
+
+    ## Best Model
+    Random Forest Regression
+    R² = 0.8862
+    MAE = 2510.28
+    RMSE = 4572.72
+    The Random Forest model achieved the highest predictive accuracy and provided feature importance
+    rankings that aligned closely with statistical analysis and business findings.
+
+    ## Business Outcome
+       The project successfully identified the key drivers of healthcare insurance costs
+       and delivered interactive business intelligence dashboards to support evidence-based decision making.
+    """)
+
+    # add footer at the bottom of the page
+    st.divider()
+    
+    st.caption(
+            "Healthcare Insurance Cost Analysis Dashboard | Code Institute Capstone Project"
+        )
+    
