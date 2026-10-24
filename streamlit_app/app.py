@@ -741,7 +741,8 @@ elif page == "Executive Summary":
     - Age significantly affects charges.
     - Region has a modest effect.
     - Sex has limited impact.
-
+    """)
+    st.success("""
     ## Best Model
     Random Forest Regression
     R² = 0.8862
@@ -749,7 +750,8 @@ elif page == "Executive Summary":
     RMSE = 4572.72
     The Random Forest model achieved the highest predictive accuracy and provided feature importance
     rankings that aligned closely with statistical analysis and business findings.
-
+    """)
+    st.info("""
     ## Business Outcome
        The project successfully identified the key drivers of healthcare insurance costs
        and delivered interactive business intelligence dashboards to support evidence-based decision making.
