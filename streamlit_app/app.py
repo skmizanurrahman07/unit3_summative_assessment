@@ -16,12 +16,6 @@ st.set_page_config(
 # ---------------------------------------------------
 
 df = pd.read_csv("data/insurance_cleaned.csv")
-
-# ---------------------------------------------------
-# Title
-# ---------------------------------------------------
-st.title("Healthcare Insurance Cost Analysis Dashboard")
-
 # Create Sidebar Navigation
 page = st.sidebar.radio(
     "Choose a Section",
@@ -35,7 +29,10 @@ page = st.sidebar.radio(
 )
 # Add Home Page
 if page == "Home":
-
+# ---------------------------------------------------
+# Title
+# ---------------------------------------------------
+    st.title("Healthcare Insurance Cost Analysis Dashboard")
     st.write("""
                This dashboard explores healthcare insurance costs using:
             - Exploratory Data Analysis
@@ -277,6 +274,7 @@ elif page == "Machine Learning":
 
     RMSE = 4572.72
     """)
+
 # Create Ethics page:
 
 elif page == "Ethics":
