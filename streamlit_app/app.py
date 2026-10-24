@@ -24,7 +24,9 @@ page = st.sidebar.radio(
         "EDA",
         "Hypothesis Testing",
         "Machine Learning",
-        "Ethics"
+        "Ethics",
+        "Business Recommendations",
+        "Project Conclusions"
     ]
 )
 # Add Home Page
@@ -262,7 +264,6 @@ elif page == "Machine Learning":
     st.bar_chart(
         results.set_index("Model")
     )
-
     st.success("""
     Best Performing Model
 
@@ -274,7 +275,37 @@ elif page == "Machine Learning":
 
     RMSE = 4572.72
     """)
+    feature_importance = pd.DataFrame({
+        "Feature": [
+            "Smoking Status",
+            "BMI",
+            "Age",
+            "Children",
+            "Region"
+        ],
+        "Importance": [
+            59.8,
+            22.2,
+            13.9,
+            2.4,
+            1.6
+        ]
+    })
 
+    st.subheader("Random Forest Feature Importance")
+
+    feature_fig = px.bar(
+        feature_importance,
+        x="Feature",
+        y="Importance",
+        color="Feature",
+        title="Feature Importance"
+    )
+
+    st.plotly_chart(
+        feature_fig,
+        use_container_width=True
+    )
 # Create Ethics page:
 
 elif page == "Ethics":
@@ -306,4 +337,61 @@ elif page == "Ethics":
 
     Machine learning outputs should support
     decision-making and not replace human judgement.
+    """)
+# Create Business Recommendations page:
+
+elif page == "Business Recommendations":
+
+    st.title("Business Recommendations")
+
+    st.success("""
+    Recommendation 1
+
+    Smoking cessation programmes should be encouraged because smoking status was identified as the strongest predictor of healthcare insurance costs.
+    """)
+
+    st.success("""
+    Recommendation 2
+
+    Organisations should invest in wellness and BMI management initiatives to help reduce long-term healthcare expenditure.
+    """)
+
+    st.success("""
+    Recommendation 3
+
+    Age and BMI should be considered when designing personalised healthcare plans and preventive health interventions.
+    """)
+
+    st.success("""
+    Recommendation 4
+
+    Future analysis should include additional variables such as medical history, income and chronic conditions to improve model accuracy.
+    """)
+
+
+
+# Create Project Conclusions page:
+elif page == "Project Conclusions":
+
+    st.title("Project Conclusions")
+
+    st.markdown("""
+    ## Key Findings
+
+    - Smoking status is the strongest predictor of healthcare insurance charges.
+    - BMI and Age significantly influence costs.
+    - Geographic region has a smaller but statistically significant impact.
+    - Sex has limited influence on healthcare insurance charges.
+
+    ## Best Machine Learning Model
+
+    Random Forest Regression
+
+    - R² = 0.8862
+    - MAE = 2510.28
+    - RMSE = 4572.72
+
+    ## Project Outcome
+
+    The dashboard successfully fulfils the business requirements by identifying key cost drivers and providing interactive visualisations to support data-driven decision making.
     """)
