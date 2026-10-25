@@ -235,16 +235,23 @@ elif page == "Hypothesis Testing":
     Smokers have significantly higher insurance charges
 
     Welch T-Test p-value:
-    6.26e-103
+    5.89e-103
+
+    The extremely small p-value indicates a highly
+    significant difference in charges between smokers and non-smokers
+
     """)
 
     st.success("""
-    H2 Supported
+        H2 Supported
 
-    BMI significantly affects charges
+        BMI significantly affects charges
 
-    ANOVA p-value:
-    1.54e-11
+        ANOVA p-value:
+        1.85e-11
+        The p-value is substantially below 0.05,
+        indicating statistically significant differences
+        in insurance charges across BMI categories.
     """)
 
     st.success("""
@@ -253,7 +260,7 @@ elif page == "Hypothesis Testing":
     Region significantly affects charges
 
     ANOVA p-value:
-    0.0328
+    0.0309
     """)
     
     st.info("""
@@ -289,10 +296,10 @@ elif page == "Machine Learning":
             "LightGBM"
         ],
         "R²": [
-            0.8068,
-            0.8862,
-            0.8670,
-            0.8745
+            0.7833,
+            0.8693,
+            0.8610,
+            0.8531
         ]
     })
     fig = px.bar(
@@ -322,11 +329,11 @@ elif page == "Machine Learning":
 
     ✅ Random Forest
 
-    R² = 0.8862
+    R² = 0.8693
 
-    MAE = 2510.28
+    MAE = 2437.57
 
-    RMSE = 4572.72
+    RMSE = 4504.41
     """)
     st.info("""
         Why Random Forest?
@@ -348,11 +355,11 @@ elif page == "Machine Learning":
             "Region"
         ],
         "Importance": [
-            59.8,
-            22.2,
-            13.9,
-            2.4,
-            1.6
+            60.9,
+            22.0,
+            13.5,
+            2.1,
+            1.5
         ]
     })
     fig = px.bar(
@@ -372,7 +379,7 @@ elif page == "Machine Learning":
     st.info("""
         Feature Importance Interpretation
 
-        Smoking Status accounts for approximately 60% of
+        Smoking Status accounts for approximately 60.9% of
         the model's predictive power, confirming it as the
         single most influential factor affecting healthcare
         insurance costs.
@@ -713,9 +720,9 @@ elif page == "Project Conclusions":
 
     Random Forest Regression
 
-    - R² = 0.8862
-    - MAE = 2510.28
-    - RMSE = 4572.72
+    - R² = 0.8693
+    - MAE = 2437.57
+    - RMSE = 4504.41
 
     ## Project Outcome
 
@@ -747,9 +754,9 @@ elif page == "Executive Summary":
 
     Random Forest Regression
 
-    **R² Score**: = 0.8862
-    **MAE**: = 2510.28
-    **RMSE**: = 4572.72
+    **R² Score**: = 0.8693
+    **MAE**: = 2437.57
+    **RMSE**: = 4504.41
 
     The Random Forest model achieved the highest predictive accuracy and provided feature importance
     rankings that aligned closely with statistical analysis and business findings.
