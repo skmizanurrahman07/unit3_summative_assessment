@@ -79,41 +79,112 @@ Develop an interactive business intelligence dashboard.
 * Display machine learning outcomes.
 * Communicate business insights effectively.
 
-
-## Dataset Information
-### Dataset Source
-
-The dataset was obtained from Kaggle:
+# Dataset Information
+### Dataset Source and collection
+The dataset was sourced from Kaggle as a publicly available healthcare insurance dataset containing anonymised records.
 
 https://www.kaggle.com/datasets/willianoliveiragibin/healthcare-insurance
 
+Data collection involved:
 
-Dataset Variables
-Variable	DescriptionAge	Age of policyholder
-Sex	Gender
-BMI	Body Mass Index
-Children	Number of dependents
-Smoker	Smoking status
-Region	Geographic region
-Charges	Medical insurance charges
-Dataset Summary
+* Dataset acquisition
+* Data validation
+* Dataset quality assessment
+* Data suitability review against business requirements
+
+### Dataset Variables
+
+| Variable | Description               |
+|----------|---------------------------|
+| Age      | Age of the insured person |
+| Sex      | Gender                    |
+| BMI      | Body Mass Index           |
+| Children | Number of dependents      |
+| Smoker   | Smoking status            |
+| Region   | Geographic region         |
+| Charges  | Medical insurance charges |
+
+### Dataset Summary
 1338 Records
 7 Variables
 No missing values
 Publicly available and anonymised
 
+# Project Planning and Roadmap
 
+The project followed an iterative and agile development approach managed through GitHub Projects.
 
+### GitHub Project Board
 
+Project planning, sprint management, task tracking and milestone monitoring were completed using GitHub Projects.
 
-## Dataset Content
+Project Board: https://github.com/users/skmizanurrahman07/projects/13/views/1
 
-* Data collected from (https://www.kaggle.com/datasets/willianoliveiragibin/healthcare-insurance?select=insurance.csv)
+## Development Roadmap
+### Phase 1
+Project Setup
+* Configure development environment.
+*  Create GitHub repository.
+*  Create project board.
+*  Define business requirements.
 
-## Business Requirements
+### Phase 2
+Data Collection
+* Source healthcare insurance dataset.
+* Assess data quality.
+* Validate data suitability.
 
-* Identify the factors that affect insurance cost
-* Develop an interactive business intelligence tool
+### Phase 3
+Data Preparation
+* Data cleaning.
+* Data transformation.
+* Feature engineering.
+* Categorisation.
+
+### Phase 4
+Analysis
+* Exploratory Data Analysis.
+* Statistical testing.
+* Correlation analysis.
+
+### Phase 5
+Machine Learning
+* Linear Regression.
+* Random Forest Regression.
+* XGBoost.
+* LightGBM.
+
+### Phase 6
+Business Intelligence
+* Power BI dashboard.
+* Streamlit dashboard.
+
+### Phase 7
+Validation and Documentation
+* Business Requirement Validation.
+* Ethical Review.
+* README documentation.
+* Deployment.
+
+## CRISP-DM Methodology
+This project follows the Cross Industry Standard Process for Data Mining (CRISP-DM).
+1. Business Understanding
+* Define objectives and project requirements.
+
+2. Data Understanding
+* Investigate dataset structure and data quality.
+
+3. Data Preparation
+* Clean, transform and prepare data for analysis.
+
+4. Modelling
+* Train machine learning models.
+
+5. Evaluation
+* Assess performance and validate findings.
+
+6. Deployment
+* Deploy dashboards and documentation.
 
 ## Hypothesis and how to validate?
 
@@ -124,67 +195,231 @@ Publicly available and anonymised
 - Hypothesis (H5): Geographic region influences insurance charges
 - Hypothesis (H6): Sex of a person influences insurance charges
 
-## Project Plan and Development Road map
+## Mapping Business Requirements to Data Visualisations
 
-To meet the business requirements this project follows CRISP-DM Workflow as a standard: 
-- Business Understanding 
-- Data understanding
-- Data preparation
-- Modelling
-- Evaluation and 
-- Deployment
+| Business Question | Visualisation                 |
+| ----------------- | ----------------------------- |
+| Smoking Impact    | Histogram, Feature Importance |
+| BMI Impact        | Scatter Plot                  |
+| Age Impact        | KPI Analysis, Correlation     |
+| Region Impact     | Regional Comparison Chart     |
+| Sex Impact        | Statistical Analysis          |
+| Machine Learning  | Model Comparison Chart        |
 
-- Step 1: Preparation 
-          Setup Vscode environment (IDE), create public Github Repository, upload project with all the required files and folders. 
-- Step 2: Data Sourcing
-          Gather the required Dataset (Healthcare Insurance Cost) for the project to analysis 
-- Step 3: Extract-Transform-Load (ETL) to Python Pandas
-          Read the dataset file into a pandas dataframe, where step cleaning and creating new calculated coloumns are performed
-- Step 4: Analysis and Visualisation with python Ecosystem
-          Analysis include- Probabilities, Statistics and Machine learning algorithm and feature engineering pipeline
-          Visualisation include- python, Pandas, Matplotlib, seaborn, plotly, Scikit-learn, Scipy
-- Step 5: Business Intelligence and Dashboard design with Power BI
-          From Step 3, the clean dataset transfer to Power BI for business intelligence and interactive dash board design and for user interaction. Click this link to access power BI intelligence dashboard. 
-        -  Link: https://app.powerbi.com/groups/me/reports/1195b5d4-d22f-41e2-a513-57cf3c25ea8f/255a81ee1aa6d8cefa70?experience=power-bi
-- Details data analysis Project work breakdown structure (WBS) in the Project Board. Click this link to access project board. 
-          - Link: https://github.com/users/skmizanurrahman07/projects/9
-## The rationale to map the business requirements to the Data Visualisations
 
-- Hypothesis (H1): Smokers have higher insurance charges
-                   Use histogram to show smokers vs overall charge distribution
-                   Correlation matrix to show the correlation
-                   Box plot to show the distribution
+## Technology Stack
 
-- Hypothesis (H2): People with higher BMI have higher insurance charges
-                   Correlation matrix to show correlation
-                   Geographic region influences insurance charges
-                   Scatter chart to show the distribution
+### Programming Languages
+* Python
+### Data Analysis
+* `Pandas` - Data Loading, Transformation, and Cleaning
+* `NumPy` - Numerical Computation and Array Operations
+* `Scipy` - Statistical Tests and Scientific Computation 
+### Visualisation
+* `Matplotlib` - Multi‑Chart Layouts and Base Visualisation
+* `Seaborn` - Statistical Visualisation
+* `Plotly` - Interactive Visualisations
+### Machine Learning
+* `scikit-learn` - Machine Learning Models and Preprocessing 
+* `XGBboost` - Gradient Boosting for High‑Performance ML 
+* `LightGBM` - Fast Gradient Boosting for Large Datasets
+### Business Intelligence
+* Power BI
+* Streamlit
+### Development Tools
+* GitHub
+* VS Code
+* Jupyter Notebook
+* Heroku
 
-- Hypothesis (H3): Including children on an insurance plan increase charges
-                   Including children on an insurance plan increases charges
+# Data Preparation and Feature Engineering
+### Activities Performed
+* Dataset inspection
+* Data validation
+* Data type verification
+* Feature categorisation
+* Business logic transformation
+* Exploratory checks
 
-- Hypothesis (H4): Age of a person influences insurance charges 
-                   Correlation matrix to show correlation
+### Data Quality
+The dataset contained:
+* ONE duplicate rows
+* No missing values
+* Consistent formatting
 
-- Hypothesis (H5): Geographic region influences insurance charges
-                   Geographic region influences insurance charges
+# Exploratory Data Analysis
+DA was undertaken to identify relationships between variables and insurance charges.
+### Analysis Conducted
+* Descriptive statistics
+* Histograms
+* Scatter plots
+* Correlation analysis
+* Regional analysis
+* Smoking analysis
 
-- Hypothesis (H6): Sex of a person influences insurance charges
-                   Box plot to show the distribution
-  
-## Analysis techniques used
+# Key Findings
 
-Structure Justification:
+### Smoking Status
+* Smoking status is the strongest predictor of healthcare insurance charges.
 
-   - Data cleanup and transform and feature engineering Section 1
+### BMI
+* Higher BMI individuals generally incur higher insurance costs.
 
-   - Visualisation and statistical analysis in Section 2.
-   
-   - Machine Learning in Section 3
+### Age
+* Insurance costs increase as age increases.
 
-## Use of Generative AI:
+### Region
+* Regional differences are present but less influential.
 
-   - AI supported: GitHub copilot extention was installed and so did speed up some repetative tasks.
+## Sex
+* Sex demonstrates limited influence on healthcare charges.
+
+# Statistical Analysis
+### H1 Smoking Status
+* Welch's T-Test  p-value: 5.89e-103
+* Supported Smoking status significantly affects healthcare insurance costs.
+### H2 BMI
+* ANOVA   p-value:  1.85e-11
+* Supported BMI significantly affects healthcare insurance costs.
+### H5 Region
+* ANOVA   p-value: 0.0309
+* Supported Region significantly affects healthcare insurance costs.
+
+# Machine Learning
+### Models Evaluated
+* Linear Regression
+* Random Forest Regression
+* XGBoost
+* LightGBM
+
+| Model                      | MAE      | RMSE     | R² Score |
+|----------------------------|----------|----------|----------|
+| Linear Regression          | 4187.32  | 5800.06  | 0.7833   |
+| Random Forest Regression   | 2437.57  | 4504.41  | 0.8693   |
+| XGBoost Regression         | 2721.45  | 4644.79  | 0.8610   |
+| LightGBM Regression        | 2908.04  | 4775.06  | 0.8531   |
+
+### Model Ranking
+* Random Forest Regression (R² = 0.8693)
+* XGBoost Regression (R² = 0.8610)
+* LightGBM Regression (R² = 0.8531)
+* Linear Regression (R² = 0.7833)
+
+
+### Model Comparison
+
+### Best Performing Model
+* Random Forest Regression
+
+| Metric    | Value   |
+|-----------|---------|
+| MAE       | 2437.57 |
+| RMSE      | 4504.41 |
+| R² Score  | 0.8693  |
+
+# Power BI Dashboard
+
+A business intelligence dashboard was developed using Microsoft Power BI.
+
+Features include:
+
+* Executive Summary
+* KPI Reporting
+* Regional Insights
+* Age Analysis
+* BMI Analysis
+* Smoking Analysis
+
+* Power BI Dashboard: https://app.powerbi.com/groups/me/reports/1195b5d4-d22f-41e2-a513-57cf3c25ea8f/255a81ee1aa6d8cefa70?experience=power-bi
+
+# Streamlit Dashboard
+
+The Streamlit application provides interactive data exploration and business reporting. https://healthcare-insurance-cost-b71903468e94.herokuapp.com/
+
+Pages include:
+
+* Home
+* EDA
+* Hypothesis Testing
+* Machine Learning
+* Ethics
+* Business Requirement Validation
+* Business Recommendations
+* Project Conclusions
+* Executive Summary
+
+# Business Requirement Validation
+### Requirement 1
+
+Identify the factors affecting healthcare insurance costs.
+
+### Result
+
+✅ Successfully Achieved
+
+Evidence:
+* EDA
+* Statistical Testing
+* Machine Learning
+* Feature Importance Analysis
+
+### Requirement 2
+
+Develop an interactive business intelligence tool.
+
+### Result
+
+✅ Successfully Achieved
+
+Evidence:
+* Power BI Dashboard
+* Streamlit Dashboard
+* Interactive Visualisations
+* KPI Reporting
+
+## Business Recommendations
+
+Based on the analysis:
+
+### Smoking Intervention Programmes
+Encourage smoking cessation programmes.
+
+### Preventive Healthcare
+Promote healthier lifestyles and weight management.
+
+### Risk-Based Pricing
+Continue using smoking status as a pricing factor.
+
+### Customer Segmentation
+Use Age and BMI to support targeted offerings.
+
+### Predictive Analytics
+Implement predictive models to support decision-making.
+
+## Executive Summary
+### Key Findings
+* Smoking Status is the strongest predictor of insurance costs.
+* BMI significantly affects insurance charges.
+* Age significantly affects charges.
+* Region has a moderate effect.
+* Sex has limited impact.
+
+## Project Achievements
+
+✅ Business Requirement 1 Successfully Achieved
+
+✅ Business Requirement 2 Successfully Achieved
+
+✅ Statistical Hypotheses Validated
+
+✅ Interactive Power BI Dashboard Developed
+
+✅ Interactive Streamlit Dashboard Developed
+
+✅ Machine Learning Models Evaluated
+
+✅ Ethical, Privacy and Governance Considerations Addressed
+
 
 # Ethical Considerations, Data Privacy and Governance
 
@@ -259,34 +494,47 @@ Healthcare insurance analytics can influence pricing strategies, risk assessment
 
 For this reason, the findings from this project should be viewed as decision-support insights rather than automated decision-making tools.
 
----
 
-## Use of Generative AI
+# Deployment
+### Heroku Deployment
+The application is deployed using:
+* Heroku
+* Procfile
+* setup.sh
+* requirements.txt
+* Live Application: https://healthcare-insurance-cost-b71903468e94.herokuapp.com/
 
-GitHub Copilot and ChatGPT were used to support coding, documentation and troubleshooting during development. All generated outputs were independently reviewed, tested and validated before inclusion in the project. Responsibility for the final code, analysis and conclusions remains with the project author.
-## Limitations & Alternatives:
+# Limitations & Alternatives:
+* Dataset contains only 1338 records.
+* Dataset excludes medical history.
+* Income information is unavailable.
+* Family health history is unavailable.
+* External healthcare factors are not represented.
 
-- Limited data points availble in the csv, other factors could influence the decsion such as medial history, family income etc.
+# Future Improvements
+* Explainable AI (XAI)
+* Additional healthcare datasets
+* API integration
+* Real-time predictions
+* Advanced feature engineering
+* Automated retraining pipelines
+
+# Use of Generative AI
+GitHub Copilot and ChatGPT were used to support:
+* Code generation
+* Documentation
+* Troubleshooting
+* Dashboard design
+
+All outputs were reviewed, tested and validated before inclusion.
+Responsibility for the final project remains with the author.
+
 
 ## Unfixed Bugs
 
 * - No unfixed bugs remaining
 
-## Main Data Analysis Libraries
-
-The following libraries are used for this data analysis-
-
-1. `Pandas` - Data Loading, Transformation, and Cleaning
-2. `NumPy` - Numerical Computation and Array Operations
-3. `Matplotlib` - Multi‑Chart Layouts and Base Visualisation
-4. `Seaborn` - Statistical Visualisation
-5. `Plotly` - Interactive Visualisations
-6. `Scipy` - Statistical Tests and Scientific Computation 
-7. `scikit-learn` - Machine Learning Models and Preprocessing 
-8. `XGBboost` - Gradient Boosting for High‑Performance ML 
-9. `LightGBM` - Fast Gradient Boosting for Large Datasets
-
-## Credits
+# Credits
 - [Code institute](https://codeinstitute.net/) - The intial project structure.
 - [Kaggle](https://www.kaggle.com/) - Providing the data set used.
 - [NHS website](https://www.nhs.uk/conditions/obesity/) - Providing the BMI category definitions.
@@ -295,5 +543,25 @@ The following libraries are used for this data analysis-
 - Copilot
 - code institute students
 
-## Acknowledgements
-* Thank you the Code Institute and the staff who contributed and supported LMS contents.
+### Learning Resources
+* Code Institute
+* Streamlit Documentation
+* Scikit-Learn Documentation
+* Plotly Documentation
+* Power BI Documentation
+
+### Additional Resources
+* NHS BMI Guidance
+* UK GDPR Documentation
+* Data Protection Act 2018
+
+### Acknowledgements
+Special thanks to:
+* Code Institute
+* Course Facilitators
+* Mentors
+* Fellow Students
+* Open Source Community
+* contributor who creates LMS contents.
+
+for the guidance, resources and support provided throughout this project.
