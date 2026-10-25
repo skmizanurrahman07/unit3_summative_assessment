@@ -1,9 +1,110 @@
-## Healthcare Insurance Cost Analysis Project
+# Healthcare Insurance Cost Analysis Dashboard
+# Code Institute Capstone Project
 
-This project set out to explore how Data Analytics and AI tools can be use to extract inside information from raw datasets into meaningful insights that utilise for prediction and decesion manking in data driven organisation and for business success. The healthcare Insurance Cost Analysis Project seeks empirically to explore systematic approach to analyse a full end‑to‑end data analytics and machine learning investigation into healthcare insurance costs
-Using a real‑world dataset containing Age, Gender, Body mass index, Somking habit and Geographic location that affect insurance cost. The goal is to understand the drivers of insurance charges and build predictive models capable of estimating cost based on customer attributes. 
+Live Application
+
+🌐 Heroku Deployment
+
+Healthcare Insurance Cost Analysis Dashboard https://healthcare-insurance-cost-b71903468e94.herokuapp.com/
+
+GitHub Repository
+
+💻 Source Code 
+
+unit3_summative_assessment https://github.com/skmizanurrahman07/unit3_summative_assessment
+
+Power BI Dashboard
+
+📊 Interactive Business Intelligence Dashboard
+
+Healthcare Insurance Cost Power BI Dashboard https://app.powerbi.com/groups/me/reports/1195b5d4-d22f-41e2-a513-57cf3c25ea8f/255a81ee1aa6d8cefa70?experience=power-bi
+
+Project Management Dashboard
+
+📋 GitHub Project Board https://github.com/users/skmizanurrahman07/projects/13/views/1
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
+# Healthcare Insurance Cost Analysis using Data Analytics, Machine Learning and Business Intelligence
+
+## Project Overview 
+
+The Healthcare Insurance Cost Analysis Dashboard is an end-to-end Data Analytics and Machine Learning project developed as part of the Code Institute Capstone Project.
+
+The project investigates the key factors that influence healthcare insurance costs using:
+
+* Exploratory Data Analysis (EDA)
+* Statistical Hypothesis Testing
+* Machine Learning
+* Power BI Business Intelligence
+* Streamlit Dashboard Development
+* Ethical Practice and Governance
+
+The objective is to identify the primary drivers of healthcare insurance charges and communicate actionable insights through business intelligence dashboards and predictive modelling.
+
+This project demonstrates the complete data analytics lifecycle from business understanding through deployment and evaluation using real-world healthcare insurance data.
+
+# Business Case
+
+Healthcare insurance providers require a deeper understanding of the factors influencing insurance charges in order to:
+
+* Improve pricing strategies
+* Support risk assessment
+* Enhance customer segmentation
+* Improve business decision-making
+* Optimise healthcare cost forecasting
+
+The Healthcare Insurance Cost Analysis project investigates these factors using statistical analysis, machine learning and interactive dashboards.
+
+The project aims to determine whether demographic, behavioural and geographical factors influence healthcare insurance costs and whether machine learning can effectively predict future charges.
+
+# Business Requirements
+## Business Requirement 1
+
+Identify the factors affecting healthcare insurance costs.
+
+## Success Criteria
+* Perform exploratory data analysis.
+* Conduct statistical testing.
+* Validate key business hypotheses.
+* Identify the strongest insurance cost drivers.
+
+## Business Requirement 2
+
+Develop an interactive business intelligence dashboard.
+
+## Success Criteria
+* Present findings visually.
+* Allow stakeholder interaction.
+* Display machine learning outcomes.
+* Communicate business insights effectively.
+
+
+## Dataset Information
+### Dataset Source
+
+The dataset was obtained from Kaggle:
+
+https://www.kaggle.com/datasets/willianoliveiragibin/healthcare-insurance
+
+
+Dataset Variables
+Variable	DescriptionAge	Age of policyholder
+Sex	Gender
+BMI	Body Mass Index
+Children	Number of dependents
+Smoker	Smoking status
+Region	Geographic region
+Charges	Medical insurance charges
+Dataset Summary
+1338 Records
+7 Variables
+No missing values
+Publicly available and anonymised
+
+
+
+
 
 ## Dataset Content
 
